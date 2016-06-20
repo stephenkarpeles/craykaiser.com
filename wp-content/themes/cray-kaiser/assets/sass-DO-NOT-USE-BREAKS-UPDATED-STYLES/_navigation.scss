@@ -1,0 +1,355 @@
+.home .main-navigation .sub-menu {
+  display: none; }
+
+.flexnav li.menu-home-link a {
+  outline: none;
+  background: url('../img/logo-main.svg') no-repeat;
+  text-indent: -9999px;
+  height: 107px; /* '.main-navigation' height minus top padding */
+  font-size: 0; 
+  transition: .25s ease all;
+  &:hover {
+    opacity: .8; } }
+
+.flexnav li.menu-home-link {
+  padding: 30px 50px 0; }
+
+/* Flexnav Base Styles 
+------------------------------------------------------*/
+.flexnav {
+  position: relative;
+  z-index: 1000;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-transform-style: preserve-3d;
+  overflow: hidden;
+  margin: 0 auto;
+  background: $blue-x-light;
+  padding: 0;
+  width: 100%;
+  font-weight: 400;
+  max-height: 0; }
+  .flexnav.opacity {
+    opacity: 0; }
+  .flexnav.flexnav-show {
+    max-height: 2000px;
+    opacity: 1;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; }
+  .flexnav.one-page {
+    position: fixed;
+    top: 50px;
+    right: 5%;
+    max-width: 200px; }
+  .flexnav li {
+    border-bottom: 1px solid $gray-mid;
+    font-size: 100%;
+    position: relative;
+    overflow: hidden;
+    &:first-child {
+      border-top: 1px solid $gray-mid; } }
+  .flexnav li a {
+    position: relative;
+    display: block;
+    padding: .96em;
+    z-index: 2;
+    overflow: hidden;
+    line-height: 26px;
+    color: $gray-main;
+    background: $blue-x-light; }
+  .flexnav li ul {
+    width: 100%; }
+    .flexnav li ul li {
+      font-size: 100%;
+      position: relative;
+      overflow: hidden; }
+  .flexnav li ul.flexnav-show li {
+    overflow: visible; }
+  .flexnav li ul li a {
+    line-height: 19px;
+    height: auto;
+    display: block;
+    color: white;
+    background: $gray-main;    
+    &:first-child {
+      border-left: 1px solid $gray-alt;
+      background: $gray-main;
+      color: white; } }
+  .flexnav ul li ul li a {
+    color: white;
+    background: $gray-main; }
+  .flexnav ul li ul li ul li a {
+    color: white;
+    background: $gray-main; }
+  .flexnav .touch-button {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: #acaca1;
+    background: rgba(0, 0, 0, 0.075);
+    text-align: center; }
+    .flexnav .touch-button:hover {
+      cursor: pointer; }
+    .flexnav .touch-button .navicon {
+      position: relative;
+      top: 1.4em;
+      font-size: 12px;
+      color: #666; }
+
+.menu-button {
+  position: relative;
+  display: block;
+  padding: 1em;
+  background: $blue-x-light;
+  color: $gray-main;
+  cursor: pointer; }
+  .menu-button.one-page {
+    position: fixed;
+    top: 0;
+    right: 5%;
+    padding-right: 45px; }
+  .menu-button .touch-button {
+    background: transparent;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center; }
+    .menu-button .touch-button .navicon {
+      font-size: 16px;
+      position: relative;
+      top: 1em;
+      color: #666; }
+
+@media all and (min-width: $bp5) {
+  body.one-page {
+    padding-top: 70px; }
+
+  .flexnav {
+    width: $width-main;
+    background: $blue-x-light;
+    max-width: 100%;
+    overflow: visible; }
+    .flexnav.opacity {
+      opacity: 1; }
+    .flexnav.one-page {
+      top: 0;
+      right: auto;
+      max-width: 1080px; }
+    .flexnav li {
+      position: static;
+      list-style: none;
+      float: left;
+      display: table;
+      background-color: $blue-x-light;
+      overflow: visible;
+      width: 18.2291666666666666%; 
+      border-bottom: none;
+      &:first-child {
+        border-top: none;
+        background-color: white;
+        width: 27.0833333333333333%; }}
+    .flexnav li:first-child a {
+      background-color: white; 
+      border-left: none; }
+    .flexnav li a {
+      display: table-cell; /* To allow for vertical text centering */
+      vertical-align: middle;
+      font-size: 1.4em;
+      text-align: center;
+      height: 137px;
+      color: $gray-main;
+      background: $blue-x-light;
+      border-left: 1px solid $gray-mid;
+      border-bottom: none; }
+    .flexnav li > ul {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      max-width: $width-main;      
+      border-top: 1px solid $gray-alt;
+      border-right: 1px solid $gray-alt;
+      top: 137px; /* Height of '.flexnav li a' */
+      height: 65px;
+      overflow: hidden;
+      left: 0; }
+      .flexnav li > ul li {
+        width: 100%; }
+    .flexnav li ul li > ul {
+      margin-left: 100%;
+      top: 0; }
+    .flexnav li ul li {
+      display: table; }
+    .flexnav li ul li a {
+      height: 64px;
+      display: table-cell;
+      vertical-align: middle;
+      border-left: 1px solid $gray-alt;
+      border-bottom: none; }
+
+  .flexchild li ul li:last-child {
+      border-right: 1px solid $gray-alt !important; }
+    .flexnav li ul.open {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      z-index: 1; }
+      .flexnav li ul.open li {
+        overflow: visible;
+        max-height: 100px; }
+      .flexnav li ul.open ul.open {
+        margin-left: 100%;
+        top: 0; }
+
+  .menu-button {
+    display: none; } }
+.oldie body.one-page {
+  padding-top: 70px; }
+.oldie .flexnav {
+  overflow: visible; }
+  .oldie .flexnav.one-page {
+    top: 0;
+    right: auto;
+    max-width: 1080px; }
+  .oldie .flexnav li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    background-color: #a6a6a2;
+    width: 20%;
+    min-height: 50px;
+    overflow: visible; }
+  .oldie .flexnav li:hover > ul {
+    display: block;
+    width: 100%;
+    overflow: visible; }
+    .oldie .flexnav li:hover > ul li {
+      width: 100%;
+      float: none; }
+  .oldie .flexnav li a {
+    border-left: 1px solid #acaca1;
+    border-bottom: none;
+    overflow: visible; }
+  .oldie .flexnav li > ul {
+    background: #acaca1;
+    position: absolute;
+    top: auto;
+    left: 0;
+    display: none;
+    z-index: 1;
+    overflow: visible; }
+  .oldie .flexnav li ul li ul {
+    top: 0; }
+  .oldie .flexnav li ul li a {
+    border-bottom: none; }
+  .oldie .flexnav li ul.open {
+    display: block;
+    width: 100%;
+    overflow: visible; }
+    .oldie .flexnav li ul.open li {
+      width: 100%; }
+    .oldie .flexnav li ul.open ul.open {
+      margin-left: 100%;
+      top: 0;
+      display: block;
+      width: 100%;
+      overflow: visible; }
+  .oldie .flexnav ul li:hover ul {
+    margin-left: 100%;
+    top: 0; }
+.oldie .menu-button {
+  display: none; }
+.oldie.ie7 .flexnav li {
+  width: 19.9%; }
+
+/* Navigation
+------------------------------------------------------ */
+.flexnav ul,
+.flexnav ul li {
+  background: $gray-main;
+  color: white; }
+
+.flexnav li ul.sub-menu li {
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.65em; }
+
+.main-navigation {
+  height: 137px; }
+
+.main-navigation li.current_page_item a { color: white; }
+.main-navigation li a:hover { color: white; }
+
+li.menu-services-parent.current_page_item a,
+li.menu-services-parent a:hover { background: $gold-main; }
+
+li.menu-family-parent.current_page_item a,     
+li.menu-family-parent a:hover { background: $blue-main; }
+
+li.menu-resources-parent.current_page_item a,  
+li.menu-resources-parent a:hover { background: $green-main; }
+
+li.menu-about-parent.current_page_item a,      
+li.menu-about-parent a:hover { background: $gold-main; }
+  
+.flexnav ul li.menu-services  { width: 16.6666666666666666%; }
+.flexnav ul li.menu-family    { width: 25%; }
+.flexnav ul li.menu-resources { width: 25%; }
+.flexnav ul li.menu-about     { width: 33.3333333333333333%; }
+
+.page-services .flexnav ul li.menu-services,                   
+.parent-services .flexnav ul li.menu-services             { z-index: 99999; } 
+
+.page-family-business-focus .flexnav ul li.menu-family,   
+.parent-family-business-focus .flexnav ul li.menu-family  { z-index: 99999; } 
+
+.page-resources .flexnav ul li.menu-resources,           
+.parent-resources .flexnav ul li.menu-resources           { z-index: 99999; }
+
+.page-about .flexnav ul li.menu-about,                    
+.parent-about .flexnav ul li.menu-about                   { z-index: 99999; } 
+
+.flexnav li ul li.menu-services a:hover   { background: $gold-main; }
+.flexnav li ul li.menu-family a:hover     { background: $blue-main; }
+.flexnav li ul li.menu-resources a:hover  { background: $green-main; }
+.flexnav li ul li.menu-about a:hover      { background: $gold-main; }
+
+/* Add pseudo elements to counter sub-pixel rounding issue on last list item */
+
+/* About Parent Page */
+li.menu-about-parent:after,
+li.menu-about-parent:hover:after, 
+li.menu-about-parent.current_page_item:after, {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 137px; }
+li.menu-about-parent:after { background: $blue-x-light; }
+li.menu-about-parent:hover:after, 
+li.menu-about-parent.current_page_item:after { background: $gold-main; }
+
+/* About Parent Page */
+li.menu-about-parent:after,
+li.menu-about-parent:hover:after, 
+li.menu-about-parent.current_page_item:after, {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 137px; }
+li.menu-about-parent:after { background: $blue-x-light; }
+li.menu-about-parent:hover:after, 
+li.menu-about-parent.current_page_item:after { background: $gold-main; }
+

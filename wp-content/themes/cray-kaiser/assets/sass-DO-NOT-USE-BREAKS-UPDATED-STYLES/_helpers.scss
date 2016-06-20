@@ -1,0 +1,19 @@
+.submenu-break,
+.menu-break {
+  display: inline-block;
+  &:after {
+    content: '\00a0'; }
+  @media all and (min-width: $bp5) {
+    &:after {
+    content: '\00a0'; }
+    display: inline-block; } }
+
+ul .submenu-break,
+ul .menu-break {
+  display: inline-block;
+  &:after {
+    content: '\00a0'; }
+  @media all and (min-width: $bp5) {
+    &:after {
+    content: ''; }
+    display: block; } }

@@ -1,0 +1,22 @@
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box); }
+
+html, body {
+  overflow-x: hidden; }
+
+body {
+  color: $gray-main;
+  font-size: 1em;
+  line-height: 1.45;
+  font-family: $sans-serif;
+  font-weight: 300; }
+
+a,
+a:visited,
+a:focus {
+  text-decoration: none; }
+
+img {
+  display: block; }

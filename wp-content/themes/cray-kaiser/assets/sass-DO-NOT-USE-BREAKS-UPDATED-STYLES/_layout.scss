@@ -1,0 +1,10 @@
+$width-main:  1200px;
+//======================================================
+
+.site-content,
+.wrapper {
+  max-width: $width-main;
+  margin: 0 auto; }
+
+.site-content {
+  padding-top: 40px; }

@@ -1,0 +1,30 @@
+$sans-serif:    'Source Sans Pro', Helvetica, Arial, sans-serif;
+$serif:         'Lexia', Georgia, serif;
+//======================================================
+
+p { 
+  margin: 0 0 1.25em;}
+
+h1, h2, h3 { 
+  color: $gold-main;
+  font-family: $serif; }
+
+h1 {
+  font-style: italic;
+  font-size: 2.3em;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0; }
+
+h2 {
+  font-size: 1.515em;
+  line-height: 1.28;
+  font-weight: 400; }
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.35;
+  font-weight: 400; }
+
+.entry-content {
+  font-size: 1.175em; }

@@ -1,0 +1,35 @@
+.sidebar {
+  border-left: 1px solid $gray-alt-2; }
+
+.testimonial {
+  display: block;
+  margin-bottom: 5px;
+  color: $gold-main;
+  font-family: $serif;
+  font-style: italic;
+  font-size: 1.1em; }
+
+.testimonial-author,
+.testimonial-author-title {
+  display: inline-block;
+  font-size: 1.1em; }
+
+.hubspot-block-wrap {
+  margin-bottom: 30px; }
+
+.hubspot-image-block {
+  position: relative;
+  img {
+    width: 100%;
+    display: block; } }
+
+.hubspot-blurb {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  font-family: $serif;
+  color: white;
+  font-size: .95em;
+  background: rgba(0, 0, 0, .7);
+  a {
+    color: white; } }
